@@ -121,6 +121,3 @@ The project is ready for deployment on **Vercel**, Netlify, or any Node.js envir
 3. Run `npm run build` and `npm start`.
 
 ---
-
-## 🤝 Contributing
-For support or questions regarding the platform, please contact the development team.
