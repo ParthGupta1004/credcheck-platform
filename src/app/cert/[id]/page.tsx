@@ -104,9 +104,9 @@ export default async function CertificatePage({ params }: PageProps) {
     fileUrl: certificate.fileUrl,
     fileName: certificate.fileName,
     status: certificate.status,
-    issuedAt: certificate.issuedAt?.toISOString() || null,
-    verifiedAt: certificate.verifiedAt?.toISOString() || null,
-    publicLinkId: certificate.publicLinkId,
+    issuedAt: certificate.issuedAt?.toISOString() ?? null,
+    verifiedAt: certificate.verifiedAt?.toISOString() ?? null,
+    publicLinkId: certificate.publicLinkId as string,
     student: {
       name: certificate.student.name,
       college: certificate.student.college,

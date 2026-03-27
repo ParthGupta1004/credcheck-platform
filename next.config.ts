@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
     'preview-chat-960126bf-e051-4778-a8c0-5a64057dc4b8.space.z.ai',
     '.space.z.ai',
   ],
+  devIndicators: false,
 };
 
 export default nextConfig;

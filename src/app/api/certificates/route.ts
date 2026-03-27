@@ -97,12 +97,12 @@ export async function POST(request: NextRequest) {
     }
 
     const cleanEmail = verifierEmail.trim().toLowerCase();
-    
+
     // Identify verifier and send in-app notification in background
     const verifierUser = await db.user.findUnique({
       where: { email: cleanEmail },
     });
-    
+
     if (verifierUser) {
       db.notification.create({
         data: {
@@ -114,9 +114,9 @@ export async function POST(request: NextRequest) {
       }).catch(err => console.error("Background notification error:", err));
     }
 
-    return NextResponse.json({ 
-      success: true, 
-      certificate: certificate 
+    return NextResponse.json({
+      success: true,
+      certificate: certificate
     }, { status: 201 });
   } catch (error) {
     console.error('Error creating certificate:', error);
